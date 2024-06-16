@@ -90,14 +90,16 @@ export const Detection: FC = () => {
                 <Styled.FragmentImage style={{ height: isMobile ? '300px' : '900px', width: '100%' }} alt={selectedFragment?.comment ?? ''} images={[{ type: 'jpeg', image: `data:image/jpeg;base64,${selectedFragment?.frame ?? ''}` }]} radius={theme.radiuses.df} />
               </Zoom>
             ) : (
-              <Flex fullWidth alignItems={FlexAlignItems.CENTER} justifyContent={FlexJustifyContent.CENTER} style={{ background: 'white', borderRadius: RADIUSES.MEDIUM + 'px', width: '100%', height: isMobile ? '300px' : '900px' }}>
+              <Flex fullWidth alignItems={FlexAlignItems.CENTER} justifyContent={FlexJustifyContent.CENTER} style={{ background: theme.colors.base.primary, borderRadius: RADIUSES.MEDIUM + 'px', width: '100%', height: isMobile ? '300px' : '900px' }}>
                 {(fragmentsData?.actions.length === 0 || !fragmentsData?.actions) && data?.id ? <Spinner /> : <Text size={TextSize.M2}>Для начала загрузите ролик</Text>}
               </Flex>
             )}
           </Flex>
           <Styled.Container fullHeight gap={theme.spacings.x48} direction={isMobile ? FlexDirection.COLUMN_REVERSE : FlexDirection.COLUMN}>
             {isMobile && <Spacer space={theme.spacings.x48} />}
-            <Button fullWidth={isMobileSmall} variant={ButtonVariant.PRIMARY}>Ошибка нейросети</Button>
+            <Flex fullWidth gap={theme.spacings.x8} direction={isMobileSmall ? FlexDirection.COLUMN : FlexDirection.ROW} justifyContent={FlexJustifyContent.SPACE_BETWEEN}>
+              <Button fullWidth variant={ButtonVariant.PRIMARY}>Ошибка нейросети</Button>
+            </Flex>
             <Menu onActionClick={onActionClick} actions={fragmentsData?.actions} />
             {selectedFragment?.comment && (
               <Card>

@@ -10,7 +10,7 @@ export const Text = forwardRef<HTMLParagraphElement, TextProps>(
     {
       size = TextSize.S3,
       fontWeight,
-      color = COLORS.BASE_COLORS.DARK,
+      color = COLORS.BASE_COLORS.LIGHT,
       align,
       children,
       ...props

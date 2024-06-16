@@ -32,7 +32,7 @@ export const DesktopHeader: FC = () => {
         {!isMobile && (
           <Flex direction={FlexDirection.COLUMN}>
             <Text size={TextSize.M1} fontWeight={500}>Брегман Илья</Text>
-            <Text size={TextSize.S2} color={theme.colors.base.grey['400']}>4 отдел МВД</Text>
+            <Text size={TextSize.S2} color={theme.colors.base.grey['400']}>Модератор</Text>
           </Flex>
         )}
         <Avatar src='https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=3149&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' />

@@ -44,11 +44,11 @@ const getButtonSizeCSS = {
 const getButtonVariantCSS = {
   [ButtonVariant.PRIMARY]: css`
     background: ${({ theme }) => theme.colors.base.primary};
-    color: ${({ theme }) => theme.colors.base.dark};
+    color: ${({ theme }) => theme.colors.base.light};
 
     &:hover {
       background: ${({ theme }) => hexToRgba(theme.colors.base.primary, 0.5)};
-      color: ${({ theme }) => theme.colors.base.dark};
+      color: ${({ theme }) => theme.colors.base.grey['350']};
     }
 
     &:disabled {

@@ -1,11 +1,13 @@
 import React, { type FC } from 'react';
 
+import { COLORS } from '@lib/theme/constants';
+
 import { StyledLayout } from './styled';
 import { type LayoutProps } from './types';
 
 export const Layout: FC<LayoutProps> = ({
   children,
-  backgroundColor,
+  backgroundColor = COLORS.BASE_COLORS.BACKGROUND,
   backgroundImage,
   header,
   footer

@@ -22,8 +22,14 @@ const FragmentImage = styled(Image)`
   }
 `;
 
+const Video = styled.iframe`
+  height: 60vh;
+  object-fit: cover;
+`;
+
 export const Styled = {
   Container,
   Head,
-  FragmentImage
+  FragmentImage,
+  Video
 };
